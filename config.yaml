@@ -1,0 +1,49 @@
+# Secudity Audit Toolkit Configuration
+
+project:
+  name: "Secudity Audit Toolkit"
+  version: "1.0.0"
+  author: "Secudity Team"
+
+scanner:
+  enable_slither: true
+  enable_custom_checks: true
+  solc_version: "0.8.24"
+  
+  # Vulnerability checks to run
+  checks:
+    - reentrancy
+    - access_control
+    - integer_overflow
+    - unchecked_calls
+    - tx_origin
+    - timestamp_dependence
+    - delegatecall
+    - selfdestruct
+    - uninitialized_storage
+    - locked_ether
+    - gas_optimization
+
+severity_levels:
+  critical: ["reentrancy", "access_control", "integer_overflow"]
+  high: ["unchecked_calls", "delegatecall", "uninitialized_storage"]
+  medium: ["tx_origin", "timestamp_dependence", "locked_ether"]
+  low: ["gas_optimization", "code_quality"]
+  informational: ["best_practices", "documentation"]
+
+report:
+  format: "pdf" 
+  include_gas_analysis: true
+  include_code_snippets: true
+  include_recommendations: true
+  color_coding: true
+
+output:
+  directory: "output"
+  timestamp: true
+  separate_files: false 
+
+branding:
+  logo: "docs/secudity-logo.png"
+  website: "https://instagram.com/secudity"
+  tagline: "Security + Solidity"
