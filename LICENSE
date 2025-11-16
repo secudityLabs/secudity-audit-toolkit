@@ -21,13 +21,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 EOF
 
-# Create output/.gitkeep to track the directory
-touch output/.gitkeep
-
-# Initialize git and commit
-git add .
-git commit -m "🎉 Initial release: Secudity Audit Toolkit v1.0.0
-
 ✨ Features:
 - Automated vulnerability detection (10+ vulnerability types)
 - Gas optimization analysis
